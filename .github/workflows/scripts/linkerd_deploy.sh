@@ -22,7 +22,7 @@ kubectl get pods -n meshery
 
 echo "Deploying meshery linkerd adapter..."
 #mesheryctl system login --provider None
-echo | mesheryctl mesh deploy adapter meshery-linkerd:10001 --token "./.github/workflows/auth.json"
+echo | mesheryctl mesh deploy adapter meshery-linkerd:10001 --token "./.github/workflows/auth.json" --verbose
 sleep 200
 echo "Onboarding application... Standby for few minutes..."
 #mesheryctl app onboard -f "./emojivoto.yml" -s "Kubernetes Manifest" --token "./.github/workflows/auth.json"

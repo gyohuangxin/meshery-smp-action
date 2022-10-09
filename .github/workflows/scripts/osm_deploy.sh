@@ -22,7 +22,7 @@ echo "Meshery has been installed."
 kubectl get pods -n meshery
 
 echo "Deploying meshery osm adapter..."
-echo | mesheryctl mesh deploy adapter meshery-osm:10009 --token "./.github/workflows/auth.json"
+echo | mesheryctl mesh deploy adapter meshery-osm:10009 --token "./.github/workflows/auth.json" --verbose
 sleep 200
 echo "Onboarding application... Standby for few minutes..."
 #mesheryctl app onboard -f "./bookstore.yaml" -s "Kubernetes Manifest" --token "./.github/workflows/auth.json"

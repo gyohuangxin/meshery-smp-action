@@ -21,7 +21,7 @@ echo "Deploying meshery istio adapter..."
 echo | mesheryctl mesh deploy adapter meshery-istio:10000 --namespace "istio-system" --token "./.github/workflows/auth.json"
 sleep 200
 echo "Onboarding application... Standby for few minutes..."
-mesheryctl pattern apply -f "https://raw.githubusercontent.com/service-mesh-patterns/service-mesh-patterns/master/samples/bookInfoPattern.yaml" --token "./.github/workflows/auth.json"
+mesheryctl pattern apply -f "https://raw.githubusercontent.com/service-mesh-patterns/service-mesh-patterns/master/samples/bookInfoPattern.yaml" --token "./.github/workflows/auth.json" --verbose
 
 # Wait for the application to be ready
 sleep 100
